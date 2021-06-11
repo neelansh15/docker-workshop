@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node main.js"
   },
+  "repository": {
+    "url": "https://github.com/neelansh15/docker-workshop"
+  },
+  "displayName": "Node App for Docker Workshop",
   "dependencies": {
     "express": "^4.17.1"
   }
