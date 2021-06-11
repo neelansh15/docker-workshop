@@ -1,5 +1,5 @@
 # An official Docker image for Node.js
-FROM node:10-alpine
+FROM node:12-alpine
 
 # Working directory for the containerised application
 WORKDIR /src/app
