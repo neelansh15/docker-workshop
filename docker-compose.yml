@@ -1,0 +1,22 @@
+version: "1.0"
+services:
+    web:
+        build: .
+        command: npm run dev
+        ports:
+            - 10203:8000
+        environment:
+            - PORT=8000
+            - MONGO_CONNECTION_STRING=mongodb+srv://test:test@mycluster.prvob.mongodb.net/docker-workshop?retryWrites=true&w=majority
+        volumes:
+            - /src/app
+    mongodb:
+        image: mongo:4.2.8
+        ports:
+            - 27017:27017
+        volumes:
+            - mongodb:/data/db
+            - mongodb_config:/data/configdb
+    volumes:
+        mongodb:
+        mongodb_config:
